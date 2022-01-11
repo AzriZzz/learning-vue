@@ -5,16 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue.js</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <style>
-      .is-loading {
-        background-color: green;
+    <style type="text/css"> 
+      body {
+        padding-top: 40px;
       }
     </style>
   </head>
   <body>
-    <div id="root">
-      <task-list></task-list>
+    <div id="root" class="container">
+      <message title="Hello World" body="Lorem Ipsum dolar sit amet"></message>
+      <message title="Hello Universe" body="Levelling with the Gods"></message>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>

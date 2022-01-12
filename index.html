@@ -19,6 +19,24 @@
       
       <modal v-if="showModal" @close="showModal = false" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">This is coming from the slot</modal>
       <button @click="showModal = true">Show Modal</button>
+
+      <tabs>
+        <tab name="About Us" :selected="true">
+          <h1>Here is the content for the about us</h1>
+        </tab>
+
+        <tab name="Our Culture">
+          <h1>Here is the content for the our culture</h1>
+        </tab>
+
+        <tab name="Our Vision">
+          <h1>Here is the content for the our vision</h1>
+        </tab>
+
+        <tab name="My Vision">
+          <h1>Here is the content for the my vision</h1>
+        </tab>
+      </tabs>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>

@@ -1,27 +1,25 @@
-Vue.component('task-list', {
+Vue.component('coupon', {
   template: `
-    <div>
-      <task v-for="task of tasks">{{ task.task}}</task>
-    </div>
+    <input placeholder="Enter your coupon code" @blur="onCouponApplied"/>
   `,
 
-  data() {
-    return {
-      tasks: [
-        { task: "Go to the store", completed: true },
-        { task: "Finish screenshot", completed: false },
-        { task: "Make donation", completed: true },
-        { task: "Clear inbox", completed: false },
-        { task: "Clean room", completed: false },
-      ]
+  methods: {
+    onCouponApplied() {
+      this.$emit('applied');
     }
   }
-});
-
-Vue.component('task', {
-  template: '<li><slot></slot></li>'
-});
+})
 
 new Vue({
-  el: '#root'
+  el: '#root',
+
+  data: {
+    couponApplied: false
+  },
+  methods: {
+    onCouponApplied() {
+      alert('It was applied');
+      this.couponApplied = true;
+    }
+  },
 })
